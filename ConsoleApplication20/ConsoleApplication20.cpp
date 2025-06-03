@@ -71,9 +71,25 @@ public:
     bool getCollectionEdition() {
         return collectionEdition;
     }
+
+    void printBook() {
+        std::cout << "Book name: " << getName() << std::endl;
+        std::cout << "Book author: " << getAuthor() << std::endl;
+        std::cout << "Book genre: " << getGenre() << std::endl;
+        std::cout << "Book realiseYear: " << getRealiseYear() << std::endl;
+        std::cout << "Book pagesQuantity: " << getPagesQuantity() << std::endl;
+
+        if (getCollectionEdition()) {
+            std::cout << "Is this book collection edition: YES" << std::endl;
+        }
+        else {
+            std::cout << "Is this book collection edition: NO" << std::endl;
+        }
+    }
 };
 
 int main()
 {
-    
+    Book book_1;
+    book_1.printBook();
 }
