@@ -47,6 +47,30 @@ public:
     void setCollectionEdition(bool collectionEdition_s) {
         collectionEdition = collectionEdition_s;
     }
+
+    std::string getName() {
+        return name;
+    }
+
+    std::string getAuthor() {
+        return author;
+    }
+
+    std::string getGenre() {
+        return genre;
+    }
+
+    int getRealiseYear() {
+        return realiseYear;
+    }
+
+    int getPagesQuantity() {
+        return pagesQuantity;
+    }
+
+    bool getCollectionEdition() {
+        return collectionEdition;
+    }
 };
 
 int main()
