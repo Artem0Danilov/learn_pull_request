@@ -1,5 +1,6 @@
-﻿#include "Animal.h"
-#include <iostream>
+﻿#include <iostream>
+#include "Animal.h"
+
 
 int main() {
     Animal lion("Lion", 5);
@@ -9,6 +10,4 @@ int main() {
     std::cout << "Need food: " << lion.weNeedFood() << std::endl;
 
     lion.showInfo();
-
-    return 0;
 }

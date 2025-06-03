@@ -15,9 +15,9 @@ private:
 public:
     Animal(const std::string& typeName, int age);
 
-    int weNeedFood();
+    bool weNeedFood();
     bool attack() const;
-    void showInfo();
+    void showInfo() const;
 
 };
 
