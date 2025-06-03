@@ -1,36 +1,38 @@
 #include "class.h"
 
-void Book::showInfo() {
+Book::Book(const std::string& title, const std::string& author, int year, const std::string& notes) : title_(title), author_(author), year_(year), notes_(notes) {}
+
+void Book::showInfo() const {
 	std::cout << "------------\n";
-	std::cout << "Name of the book: " << name << std::endl;
-	std::cout << "Name of the author: " << author << std::endl;
-	std::cout << "Publish year: " << year << std::endl;
-	std::cout << "Extra notes: " << notes << std::endl;
+	std::cout << "Title of the book: " << title_ << std::endl;
+	std::cout << "Name of the author: " << author_ << std::endl;
+	std::cout << "Publish year: " << year_ << std::endl;
+	std::cout << "Extra notes: " << notes_ << std::endl;
 	std::cout << "------------\n";
 }
 
-void Book::changeNotes(std::string newNotes) {
-	int userChoice;
-	std::cout << "How do you want to change the notes?\n";
-	std::cout << "1. Add notes\n";
-	std::cout << "2. Rewrite notes\n";
-	std::cout << "3. Delete notes\n";
-	std::cout << ">>> ";
-	std::cin >> userChoice;
-	if (userChoice == 1) {
-		notes = notes + " " + newNotes;
-		std::cout << "Changed! Notes for this book are now: " << notes << std::endl;
-	}
-	else if (userChoice == 2) {
-		notes = newNotes;
-		std::cout << "Changed! Notes for this book are now: " << notes << std::endl;
-	}
-	else if (userChoice == 3) {
-		notes = "-";
-		std::cout << "Changed! Notes for this book are now: " << notes << std::endl;
-	}
-	else {
-		std::cout << "Error: unknown number.\n";
-	}
+std::string Book::title() const {
+	return title_;
+}
 
+std::string Book::author() const {
+	return author_;
+}
+
+int Book::year() const {
+	return year_;
+}
+
+std::string Book::notes() const {
+	return notes_;
+}
+
+void Book::addNotes(const std::string& newNotes) {
+	notes_ = notes_ + " " + newNotes;
+	std::cout << "Changed! Notes for this book are now: " << notes_ << std::endl;
+}
+
+void Book::rewriteNotes(const std::string& newNotes) {
+	notes_ = newNotes;
+	std::cout << "Changed! Notes for this book are now: " << notes_ << std::endl;
 }

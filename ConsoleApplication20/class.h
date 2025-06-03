@@ -3,13 +3,17 @@
 
 class Book {
 private:
-	std::string name;
-	std::string author;
-	int year;
-	std::string notes;
+	std::string title_;
+	std::string author_;
+	int year_;
+	std::string notes_;
 public:
-	Book(std::string name, std::string author, int year, std::string notes)
-		: name(name), author(author), year(year), notes(notes){}
-	void showInfo();
-	void changeNotes(std::string newNotes);
+	Book(const std::string& title, const std::string& author, int year, const std::string& notes = "-");
+	void showInfo()const;
+	std::string title()const;
+	std::string author()const;
+	int year()const;
+	std::string notes()const;
+	void addNotes(const std::string& newNotes);
+	void rewriteNotes(const std::string& newNotes);
 };
