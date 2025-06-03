@@ -20,12 +20,10 @@ public:
     int getAttackPower() const;
     int getDefense() const;
 
-    
     void takeDamage(int damage);
     void attack(Warrior& enemy);
     bool isAlive() const;
 
-    
     void displayStats() const;
 };
 

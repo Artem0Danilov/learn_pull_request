@@ -1,11 +1,8 @@
-#include <iostream>
 #include "warrior.h"
-
-
+#include <iostream>
 
 Warrior::Warrior(const std::string& name, int health, int attackPower, int defense)
-    : name_(name), health_(health), attackPower_(attackPower), defense_(defense) {
-}
+    : name_(name), health_(health), attackPower_(attackPower), defense_(defense) {}
 
 
 std::string Warrior::getName() const {
