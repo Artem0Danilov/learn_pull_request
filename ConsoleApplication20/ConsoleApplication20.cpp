@@ -24,6 +24,29 @@ public:
     {
     }
 
+    void setName(std::string name_s) {
+        name = name_s;
+    }
+
+    void setAuthor(std::string author_s) {
+        author = author_s;
+    }
+
+    void setGenre(std::string genre_s) {
+        genre = genre_s;
+    }
+
+    void setRealiseYear(int realiseYear_s) {
+        realiseYear = realiseYear_s;
+    }
+
+    void setPagesQuantity(int pagesQuantity_s) {
+        pagesQuantity = pagesQuantity_s;
+    }
+
+    void setCollectionEdition(bool collectionEdition_s) {
+        collectionEdition = collectionEdition_s;
+    }
 };
 
 int main()
