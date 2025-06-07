@@ -15,8 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication20.cpp">
+    <ClCompile Include="BookMain.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Book.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Book.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
